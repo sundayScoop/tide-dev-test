@@ -6,11 +6,11 @@ app = Flask(__name__)
 key_list = {}
 id_count = 0
 
-@app.route('/key', methods=['GET'])
+@app.route('/Key', methods=['GET'])
 def get_all_keys():
     return jsonify(key_list)
 
-@app.route('/key/<id>', methods=['GET'])
+@app.route('/Key/<id>', methods=['GET'])
 def get_key(id):
 
     response = {
@@ -19,7 +19,7 @@ def get_key(id):
 
     return jsonify(response)
 
-@app.route('/key', methods=['POST'])
+@app.route('/Key', methods=['POST'])
 def add_key():
     global id_count
 
